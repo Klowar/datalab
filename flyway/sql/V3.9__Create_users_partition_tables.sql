@@ -37,5 +37,4 @@ CREATE TABLE IF NOT EXISTS benchmark.part_users_9 PARTITION OF benchmark.part_us
 FOR VALUES WITH (MODULUS 10, REMAINDER 9);
 
 -- Default table for prevent data leaks
-CREATE TABLE IF NOT EXISTS benchmark.part_users_default PARTITION OF benchmark.part_users DEFAULT;
-
+-- CREATE TABLE IF NOT EXISTS benchmark.part_users_default PARTITION OF benchmark.part_users DEFAULT;
