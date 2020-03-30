@@ -3,7 +3,7 @@ BEGIN;
 SELECT
     *
 FROM
-    benchmark.users
+    benchmark.part_users
 WHERE
     id = :id;
 END;
