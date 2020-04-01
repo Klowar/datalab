@@ -6,7 +6,7 @@ CREATE SERVER foreign_server FOREIGN DATA WRAPPER postgres_fdw OPTIONS (
     dbname 'foreigndb'
 );
 
-CREATE USER MAPPING FOR local_user SERVER foreign_server OPTIONS (
+CREATE USER MAPPING FOR benchmark SERVER foreign_server OPTIONS (
     USER 'foreignuser',
     PASSWORD '1234post'
 );
