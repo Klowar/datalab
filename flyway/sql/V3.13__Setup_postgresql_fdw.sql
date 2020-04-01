@@ -1,5 +1,3 @@
-CREATE EXTENSION IF NOT EXISTS postgres_fdw;
-
 CREATE SERVER foreign_server FOREIGN DATA WRAPPER postgres_fdw OPTIONS (
     host 'ec2-35-175-225-239.compute-1.amazonaws.com',
     port '5432',
