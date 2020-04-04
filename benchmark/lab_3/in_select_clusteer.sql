@@ -7,5 +7,5 @@ FROM
     benchmark.city
 WHERE
     id > :f_from
-    AND id < t_to
+    AND id < t_to;
 END;
