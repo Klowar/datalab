@@ -1,5 +1,5 @@
 \set f_from random(1,5000)
-\set t_to random(50001,10000)
+\set t_to random(5001,10000)
 BEGIN;
 SELECT
     *
