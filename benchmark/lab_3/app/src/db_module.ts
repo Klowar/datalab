@@ -1,5 +1,6 @@
 import { Pool } from 'pg';
 import { BookI } from './model/Book';
+import dotenv from 'dotenv';
 
 // Insert to foreign tables
 const fbook_0 = 'INSERT INTO fbook_0(id, name) VALUES($1, $2) RETURNING id';
@@ -10,7 +11,14 @@ const fdw0book = 'INSERT INTO fdw0.book(id, name) VALUES($1, $2) RETURNING id';
 const fdw1book = 'INSERT INTO fdw1.book(id, name) VALUES($1, $2) RETURNING id';
 const fdw2book = 'INSERT INTO fdw2.book(id, name) VALUES($1, $2) RETURNING id';
 
-const pool = new Pool({ min: 1, log: console.log });
+const config = dotenv.config().parsed;
+console.log(config);
+
+const pool = new Pool({
+    ...config,
+    min: 1,
+    log: console.log
+});
 
 function bookQuery(id: number) {
     switch (id % 6) {

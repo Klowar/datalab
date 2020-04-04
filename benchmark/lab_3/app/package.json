@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "npm run build && node dist/index.js",
+    "start": "node dist/index.js",
+    "start:build": "npm run build && node dist/index.js",
     "build": "rm -rf dist && tsc"
   },
   "author": "Klowar",
@@ -16,6 +17,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "pg": "^8.0.0",
     "uuid": "^7.0.2"
   }
