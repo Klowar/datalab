@@ -4,7 +4,7 @@ BEGIN;
 UPDATE
     benchmark.plane
 SET
-    name = md5(:name)
+    name = md5(:name::TEXT)
 WHERE
     id = :id;
 END;

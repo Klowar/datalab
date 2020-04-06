@@ -2,7 +2,6 @@ SELECT
     class.oid AS "OID",
     relname AS "Relation Name",
     schema.nspname AS "Schema",
-    usr.rolname AS "Object Owner",
     coalesce(tblsp.spcname, 'pg_default') AS "Tablespace",
     relpages AS "Amount Pages",
     reltuples AS "Amount Tuples",
@@ -19,7 +18,6 @@ SELECT
 FROM
     pg_class class
     INNER JOIN pg_namespace SCHEMA ON schema.oid = class.relnamespace
-    INNER JOIN pg_authid usr ON usr.oid = class.relowner
     LEFT JOIN pg_tablespace tblsp ON tblsp.oid = class.reltablespace
 WHERE
     relname = 'plane';

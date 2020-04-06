@@ -1,5 +1,5 @@
 SELECT
     *
 FROM
-    pgstattuple ('benchmark.plane');
+    pgstattuple ('benchmark.plane'::regclass);
 
