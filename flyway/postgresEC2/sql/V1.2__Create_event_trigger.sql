@@ -23,7 +23,7 @@ BEGIN
                 RAISE exception 'Direct manipulation with slaves not allowed';
             END IF;
         END LOOP;
-END
+END;
 $$;
 
 -- Log create table
@@ -36,6 +36,6 @@ DECLARE
     amount integer;
 BEGIN
     RAISE LOG '% % %',
-END
+END;
 $$;
 
