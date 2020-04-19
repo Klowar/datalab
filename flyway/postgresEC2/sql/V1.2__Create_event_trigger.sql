@@ -27,15 +27,14 @@ END;
 $$;
 
 -- Log create table
-CREATE OR REPLACE FUNCTION log_create ()
-    RETURNS event_trigger
-    LANGUAGE plpgsql
-    AS $$
-DECLARE
-    obj record;
-    amount integer;
-BEGIN
-    RAISE LOG '% % %',
-END;
-$$;
-
+-- CREATE OR REPLACE FUNCTION log_create ()
+--     RETURNS event_trigger
+--     LANGUAGE plpgsql
+--     AS $$
+-- DECLARE
+--     obj record;
+--     amount integer;
+-- BEGIN
+--     RAISE LOG '% % %',
+-- END;
+-- $$;
