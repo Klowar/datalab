@@ -3,7 +3,7 @@
 \set txt random(1,1000000)
 BEGIN;
 UPDATE
-    datalab.order_hub
+    order_hub
 SET
     id = :id_1,
     name = md5(:txt::text)
