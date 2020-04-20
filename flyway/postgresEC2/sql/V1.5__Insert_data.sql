@@ -3,7 +3,7 @@ WITH temp AS (
     SELECT
         generate_series(1, 1000000) AS id,
         NOW()::date AS delivery)
-INSERT INTO datalab.order_hub
+INSERT INTO order_hub
 SELECT
     id,
     md5(id::text) AS name,
