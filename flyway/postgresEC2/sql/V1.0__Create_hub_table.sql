@@ -1,5 +1,6 @@
-CREATE TABLE datalab.order_hub (
+CREATE TABLE order_hub (
     id integer,
-    name varchar
+    name varchar,
+    delivery date
 );
 
