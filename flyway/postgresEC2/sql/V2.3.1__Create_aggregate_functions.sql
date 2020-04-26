@@ -1,5 +1,5 @@
 -- Sum aggregate func
-CREATE AGGREGATE agg_complex_summ (ComplexDig) (
+CREATE AGGREGATE agg_complex_sum (ComplexDig) (
     SFUNC = complex_sum,
     STYPE = ComplexDig,
     INITCOND = '(0,0)',
