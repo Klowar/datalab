@@ -1,0 +1,17 @@
+{
+  "name": "gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/table_fill.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/table_fill.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "node-ts": "^5.0.5"
+  }
+}
