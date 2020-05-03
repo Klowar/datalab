@@ -7,5 +7,5 @@ SELECT
 FROM
     content_btree
 WHERE
-    content LIKE CHR(:let1) || CHR(:let2) || CHR(:let3) || '%';
+    content_vector @@ to_tsquery('english', CHR(:let1) || CHR(:let2) || CHR(:let3));
 END;
