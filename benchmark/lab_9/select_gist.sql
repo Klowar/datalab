@@ -5,7 +5,7 @@ BEGIN;
 SELECT
     content
 FROM
-    content_btree
+    content_gist
 WHERE
     content_vector @@ to_tsquery('english', CHR(:let1) || CHR(:let2) || CHR(:let3));
 END;
