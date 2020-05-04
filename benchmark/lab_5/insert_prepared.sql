@@ -1,8 +1,8 @@
 \set id random(1,1000000)
 \set name random(1,1000000)
 BEGIN
-    PREPARE meat_insert AS
-    INSERT INTO meats (numeric, text)
+    PREPARE meat_insert (numeric, text) AS
+    INSERT INTO meats (id, name)
         VALUES ($1, $2);
 
 EXECUTE meat_insert (:id + 2, md5(:name::text));
