@@ -2,9 +2,9 @@
 \set name random(1,1000000)
 BEGIN;
 INSERT INTO fruits (id, name)
-    VALUES (2 + 1, md5(100::text));
+    VALUES (:id + 1, md5(:name::text));
 INSERT INTO fruits (id, name)
-    VALUES (3 + 2, md5(8::text));
+    VALUES (:id + 2, md5(:name::text));
 INSERT INTO fruits (id, name)
     VALUES (:id + 3, md5(:name::text));
 INSERT INTO fruits (id, name)
