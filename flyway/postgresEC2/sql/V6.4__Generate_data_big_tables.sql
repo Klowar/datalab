@@ -106,7 +106,7 @@ FROM
     generate_series(1, 1000000) AS i;
 
 -- Fill text first table
-INSERT INTO big_table
+INSERT INTO another_big_table
 SELECT
     md5(i::text),
     i,
