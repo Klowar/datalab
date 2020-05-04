@@ -5,5 +5,5 @@ SELECT
 FROM
     pandas_2
 WHERE
-    name = :name;
+    name = md5(:name::text);
 END;
