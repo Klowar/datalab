@@ -1,0 +1,6 @@
+  locked_item  | waiting_duration | blocked_pid |                   blocked_query                   | blocked_mode | blocking_pid |                  blocking_query                   | blocking_mode 
+---------------+------------------+-------------+---------------------------------------------------+--------------+--------------+---------------------------------------------------+---------------
+ transactionid | 00:00:01.791553  |       73141 | update user_info set balance = 900 where id = 1;  | ShareLock    |        73143 | update user_info set balance = 1000 where id = 0; | ExclusiveLock
+ transactionid | 00:00:00.854512  |       73143 | update user_info set balance = 1000 where id = 0; | ShareLock    |        73141 | update user_info set balance = 900 where id = 1;  | ExclusiveLock
+(2 rows)
+
